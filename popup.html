@@ -14,7 +14,7 @@
             display: flex;
             padding-bottom: 5px;
             border-bottom: #18ab29 solid 1px;
-            align-content: center;
+            align-items: center;
         }
 
         .btn {
@@ -31,12 +31,25 @@
         .btn:hover {
             background-color: #5cbf2a;
         }
+
+        input[type=checkbox] {
+            vertical-align: middle;
+            position: relative;
+            bottom: 2px;
+        }
+
+        label {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-    <h3 class="title">&nbsp;<img src='icon.png'>&nbsp;Copy Tabs</h3>
+    <h3 class="title">&nbsp;<img src='images/copy_tabs32.png'>&nbsp;Copy Tabs</h3>
     <button id="copyUrls" class="btn">Copy URL of Open Tabs</button>
+    <div class="checkbox">
+        <label for="includeIncognito"><input type="checkbox" id="includeIncognito">Include private tabs</label>
+    </div>
     <div id="log"></div>
 </body>
 
